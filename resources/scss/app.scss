@@ -1,2 +1,37 @@
+@use "./partials/_variables.scss" as *;
+
 @use "bootstrap";
 @use "@fortawesome/fontawesome-free/css/all.min.css";
+
+
+.black-main {
+    background-color: black;
+    .img-jumbo {
+        height: 450px;
+        width: 100%;
+        object-position: top;
+        object-fit: cover;
+    }
+    .button-absolute {
+        top: -12%;
+        left: 15%;
+    }
+    .card-container {
+        max-width: 1280px;
+        margin: auto;
+    }
+    .button-blue {
+        background-color: $color-primary;
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+    }
+    .button-load {
+        margin: auto;
+    }
+}
+
+.card-show {
+    width: 300px;
+    margin-right: 2rem;
+}
