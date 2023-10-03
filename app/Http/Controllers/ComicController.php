@@ -16,4 +16,21 @@ class ComicController extends Controller
         $comic = Comic::find($id);
         return view('show', ['comic' => $comic]);
     }
+
+    public function create() {
+        return view('create');
+    }
+
+    public function store(Request $request) {
+        $data = $request->all();
+
+        dd($data);
+        $newComic = new Comic();
+
+
+        $newComic->fill($data);
+        $newComic->save();
+
+        return redirect()->route('show', $newComic->id);
+    }
 }
