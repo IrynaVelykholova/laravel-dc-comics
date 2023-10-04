@@ -11,8 +11,8 @@ class Comic extends Model
 
     protected $casts = [
         "artists" => "array",
-        "writters" => "array",
-    ];
+        "writers" => "array",
+        ];
 
     protected $fillable = [
         "title",
@@ -22,6 +22,6 @@ class Comic extends Model
         "series",
         "type",
         "artists",
-        "writters"
+        "writers"
     ];
 }

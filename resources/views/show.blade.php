@@ -3,7 +3,7 @@
 @section('content')
     <div class="container mt-5">
 
-        <div class="d-flex justify-content-between mb-5">
+        <div class="d-flex mb-5">
             <div>
                 <img src="{{ $comic['thumb'] }}" class="card-show">
             </div>
@@ -14,11 +14,14 @@
                 <p><strong>Series: </strong>{{ $comic->series }}</p>
                 <p><strong>Sale Date:</strong> {{ $comic->sale_date }}</p>
                 <p><strong>Type: </strong> {{ $comic->type }}</p>
-                <p><strong>Artists: </strong> {{ implode(", ", $comic['artists']) }}</p>
-                <p><strong>Writers: </strong> {{ implode(", ", $comic['writers']) }}</p>
+                <p><strong>Artists: </strong> {{ implode(', ' , $comic->artists) }}</p> 
+                <p><strong>Writers: </strong> {{ implode(', ' , $comic->writers) }}</p>
             </div>
         </div>
+
+        <a href="{{ route("index") }}">Torna Indietro</a>
     </div>
 
-    <a href="{{ route("index") }}">Torna Indietro</a>
+
+    
 @endsection

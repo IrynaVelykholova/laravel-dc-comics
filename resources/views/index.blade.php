@@ -21,6 +21,9 @@
 
                 @endforeach
                 <button class="button-blue button-load">LOAD MORE</button>
+
+                <button class="button-load"><a href="{{ route('create') }}">AGGIUNGI UN COMIC</a></button>
+
             </div>
         </div>
     </div>
