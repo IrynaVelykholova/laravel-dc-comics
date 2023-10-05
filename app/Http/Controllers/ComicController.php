@@ -77,7 +77,7 @@ class ComicController extends Controller
 
     public function update(Request $request, $id) {//va passato l'id come secondo argomento
         $comic = Comic::findOrFail($id);
-        $data=$request->all();
+        $data = $request->all();
 
         //non c'è il newComic perchè non deve aggiungere ma modificare
         $data["artists"]=explode(",", $data["artists"]);
@@ -86,6 +86,14 @@ class ComicController extends Controller
         $comic -> update($data);// fill + save
 
         return redirect()->route('show',$comic->id); //mando il mio utende alla pagina dello show del comic
+    }
+
+    public function destroy($id) {
+        $comic = Comic::findOrFail($id);
+        
+        $comic->delete();
+        
+        return redirect()->route('index');
     }
 
 }

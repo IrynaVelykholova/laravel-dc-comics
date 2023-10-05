@@ -16,14 +16,13 @@
                         <a href="{{ route('show', $comic->id)}}">
                             <div class="card-body text-white">{{ $comic['title'] }}</div>
                         </a>
+
                     </div>
-
-
                 @endforeach
                 <button class="button-blue button-load">LOAD MORE</button>
 
                 <button class="button-load"><a href="{{ route('create') }}">AGGIUNGI UN COMIC</a></button>
-
+                    
             </div>
         </div>
     </div>

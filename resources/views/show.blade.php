@@ -20,8 +20,13 @@
         </div>
 
         <a href="{{ route("index") }}">Torna Indietro</a>
+        <div></div>
+        <button class="btn btn-warning"><a href="{{ route('edit', $comic->id) }}">Modifica</a></button>
+        <form action="{{ route('destroy', ['id' => $comic->id]) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">Elimina</button>
+        </form>
+        
     </div>
-
-
-    
 @endsection
